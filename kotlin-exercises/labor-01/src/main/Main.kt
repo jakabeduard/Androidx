@@ -50,8 +50,8 @@ fun doubleValue(number :Double): Double {
 }
 
 //
-//fun compactDoubleValue(number :Double): Double=number*2
+fun compactDoubleValue(number :Double): Double=number*2
 //
-//fun compactDoubleValue(number :Double)=number*2
+fun compactDoubleValue2(number :Double)=number*2
 //
-//fun  pintDounbleValue(number :Double): Double{}
+fun  pintDounbleValue3(number :Double): Double{}
