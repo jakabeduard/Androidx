@@ -17,6 +17,18 @@ fun main(args: Array<String>) {
         .filter { it.contains("e") }
         .forEach{println(it)}
 
+    daysOfWeek
+        .map{it.uppercase()}
+        .forEach{t-> println(t) }
+
+    daysOfWeek
+        .map{it.uppercase()}
+        .forEach{t-> println(t) }
+     for((index, value) in daysOfWeek.withIndex()){
+         println()
+     }
+
+
     val result =daysOfWeek.filter { it.uppercase().contains("E") }
     result.forEach{t-> println(t)}
 
@@ -34,12 +46,12 @@ fun main(args: Array<String>) {
 
 fun doubleValue(number :Double): Double {
 
-    return number1
+    return  number*2
 }
 
-
-fun compactDoubleValue(number :Double): Double=number1*2
-
-fun compactDoubleValue(number :Double)=number1*2
-
-fun  pintDounbleValue(number :Double): Double{}
+//
+//fun compactDoubleValue(number :Double): Double=number*2
+//
+//fun compactDoubleValue(number :Double)=number*2
+//
+//fun  pintDounbleValue(number :Double): Double{}
