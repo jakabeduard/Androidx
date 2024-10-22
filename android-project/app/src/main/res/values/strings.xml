@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RecipesApp</string>
+    <string name="name">Bevitel</string>
 </resources>
