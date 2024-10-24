@@ -6,10 +6,6 @@ import android.os.HandlerThread
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.tasty.recipesapp.MainActivity
-import com.tasty.recipesapp.R
 import com.tasty.recipesapp.databinding.ActivitySplashScreenBinding
 
 class SplashScreenActivity : AppCompatActivity() {
