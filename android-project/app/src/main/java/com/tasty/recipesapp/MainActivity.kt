@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root) //SetContentView(R. el is lehet, de vagy ez vagy az
-        binding.mainText.text=intent.getStringExtra("name")
+        val message = intent.getStringExtra("key")
+        binding.mainText.text=message?:"nincs  uzenet"
     }
 }
