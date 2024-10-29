@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.tasty.recipesapp.R
 
 class RecipesDetailFragment : Fragment() {
-    // TODO: Rename and change types of parameters
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

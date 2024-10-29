@@ -13,7 +13,7 @@
         android:id="@+id/mainText"
         android:layout_width="match_parent"
         android:layout_height="187dp"
-        android:text="@string/WelcomeIn"
+        android:text="@string/homeWelcome"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
