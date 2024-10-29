@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">RecipesApp</string>
-    <string name="name">Bevitel</string>
+    <string name="Welcome">Udvozollek!</string>
+    <string name="WelcomeIn">Udvozollek receptek kozt!</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

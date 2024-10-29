@@ -17,16 +17,16 @@ class SplashScreenActivity : AppCompatActivity() {
         enableEdgeToEdge()
         val binding = ActivitySplashScreenBinding.inflate(layoutInflater)
         setContentView(binding.root) //SetContentView(R. el is lehet, de vagy ez vagy az
-
-        binding.startButton.setOnClickListener{
-            //ha megnyomjuk  gombot
-            Log.i(TAG, "Start button clicked")
-//            binding.TextView.text = "Start button clicked!"
-              val intent = Intent(this, MainActivity::class.java)
-              intent.putExtra("key", binding.textView.text)
-              startActivity(intent)
-            finish()
-        }
+//
+//        binding.startButton.setOnClickListener{
+//            //ha megnyomjuk  gombot
+//            Log.i(TAG, "Start button clicked")
+////            binding.TextView.text = "Start button clicked!"
+//              val intent = Intent(this, MainActivity::class.java)
+//              intent.putExtra("key", binding.textView.text)
+//              startActivity(intent)
+//            finish()
+//        }
         // Use a HandlerThread to create a background thread
         val handlerThread = HandlerThread("SplashHandlerThread", -10)
         handlerThread.start() // Create a Handler on the new HandlerThread
