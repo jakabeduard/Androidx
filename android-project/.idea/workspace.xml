@@ -35,6 +35,11 @@
           <theme>@style/Theme.RecipesApp</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_test.xml">
+        <config>
+          <theme>@style/Theme.RecipesApp</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/nav_menu.xml">
         <config>
           <theme>@style/Theme.RecipesApp</theme>
@@ -52,9 +57,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf80b17f-a529-422c-9955-a85b0f06f466" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tasty/recipesapp/dtos/InstructionsDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tasty/recipesapp/dtos/NutritionDTO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tasty/recipesapp/models/InstructionsModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tasty/recipesapp/models/NutritionModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tasty/recipesapp/repositories/RecipeRepository.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tasty/recipesapp/ui/recipes/RecipesViewModel.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/tasty/recipesapp/ui/recipes/TestFragment.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_test.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/assetWizardSettings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/caches/deviceStreaming.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/deploymentTargetSelector.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/migrations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/navEditor.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/androidTest/java/com/tasty/recipesapp/ExampleInstrumentedTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/java/com/tasty/recipesapp/activities/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/java/com/tasty/recipesapp/activities/SplashScreenActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/java/com/tasty/recipesapp/ui/home/HomeFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/java/com/tasty/recipesapp/ui/profile/ProfileFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/java/com/tasty/recipesapp/ui/recipes/RecipesDetailFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/java/com/tasty/recipesapp/ui/recipes/RecipesFragment.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/drawable/baseline_home_24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/drawable/books_stack_of_three_svgrepo_com.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/drawable/house_svgrepo_com.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/drawable/user_profile_icon.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/layout/activity_splash_screen.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/layout/fragment_profile.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/layout/fragment_recipes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/layout/fragment_recipes_detail.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/menu/nav_menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-hdpi/recipe_bg.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/values-night/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/values/themes.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/xml/backup_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/main/res/xml/data_extraction_rules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/app/src/test/java/com/tasty/recipesapp/ExampleUnitTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-project - Copy/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_profile.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_recipes_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_recipes_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tasty/recipesapp/ui/recipes/RecipesDetailFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tasty/recipesapp/ui/recipes/RecipesDetailFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/tasty/recipesapp/ui/recipes/RecipesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/tasty/recipesapp/ui/recipes/RecipesFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash_screen.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_recipes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_recipes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +146,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=XPH5T19425002962)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=HA1S0HQ5)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -76,6 +158,8 @@
         <option value="valueResourceFile" />
         <option value="navigationResourceFile" />
         <option value="resourceFile" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -106,7 +190,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Termeloterkep/android-project&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/2024-2025/Android/Androidx/android-project&quot;
   }
 }</component>
   <component name="RecentsManager">

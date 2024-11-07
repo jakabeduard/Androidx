@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">RecipesApp</string>
-    <string name="Welcome">Udvozollek!</string>
+    <string name="Welcome">Üdvözöllek!</string>
     <string name="homeWelcome">Udvozollek alkapmazasunkon !</string>
     <string name="profilWelcome">Udvozollek profilodon !</string>
     <string name="reciptWelcome">Udvozollek recptek kozt  !</string>

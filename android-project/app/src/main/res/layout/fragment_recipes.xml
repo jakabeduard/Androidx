@@ -12,20 +12,35 @@
 
         android:layout_width="180dp"
         android:layout_height="81dp"
+        android:layout_marginTop="72dp"
         android:text="@string/reciptWelcome"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/recipesRecipesDetailID"
-        android:layout_width="210dp"
-        android:layout_height="106dp"
-        android:layout_marginBottom="112dp"
+        android:layout_width="177dp"
+        android:layout_height="70dp"
         android:text="@string/goToRecipes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.898" />
+
+    <Button
+        android:id="@+id/recipesLoadInstruction"
+        android:layout_width="129dp"
+        android:layout_height="73dp"
+        android:text="LoadInstruction"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.902" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
