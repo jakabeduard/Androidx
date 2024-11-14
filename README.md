@@ -1,3 +1,11 @@
+| Type  | Mark |
+| ------------- | ------------- |
+| K1  | 9  |
+| K2  | 5  |
+| K3  | 0  |
+| Kavg  | 4.67  |
+| A1  | 9  |
+
 # Android University Course Project Template
 
 ## Overview
