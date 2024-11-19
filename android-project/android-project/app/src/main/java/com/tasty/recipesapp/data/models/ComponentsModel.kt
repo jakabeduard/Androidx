@@ -1,7 +1,7 @@
-package com.tasty.recipesapp.models
+package com.tasty.recipesapp.data.models
 
-import com.tasty.recipesapp.dots.IngredientDTO
-import com.tasty.recipesapp.dots.MeasurementDTO
+import com.tasty.recipesapp.data.dots.IngredientDTO
+import com.tasty.recipesapp.data.dots.MeasurementDTO
 
 
 data class ComponentsModel(

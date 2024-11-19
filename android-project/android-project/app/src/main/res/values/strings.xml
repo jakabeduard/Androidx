@@ -5,6 +5,11 @@
     <string name="profilWelcome">Udvozollek profilodon !</string>
     <string name="reciptWelcome">Udvozollek recptek kozt  !</string>
     <string name="goToRecipes">Tovabb a receptekre  !</string>
+    <string name="recipe_image_content_description">Recept leiras !</string>
+    <string name="recipe_name">Recept nev !</string>
+    <string name="recipe_image_desc">Szuper finom ..... !</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.tasty.recipesapp.dots
+package com.tasty.recipesapp.data.dots
 
 data class InstructionsDTO(
     val instructionID: Int,

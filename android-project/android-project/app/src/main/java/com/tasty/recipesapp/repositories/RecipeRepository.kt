@@ -3,20 +3,20 @@ package com.tasty.recipesapp.repositories
 import android.util.Log
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import com.tasty.recipesapp.dots.ComponentsDTO
-import com.tasty.recipesapp.dots.IngredientDTO
-import com.tasty.recipesapp.dots.InstructionsDTO
-import com.tasty.recipesapp.dots.MeasurementDTO
-import com.tasty.recipesapp.dots.NutritionDTO
-import com.tasty.recipesapp.dots.RecipeDTO
-import com.tasty.recipesapp.dots.UnitDTO
-import com.tasty.recipesapp.models.ComponentsModel
-import com.tasty.recipesapp.models.IngredientModel
-import com.tasty.recipesapp.models.InstructionsModel
-import com.tasty.recipesapp.models.MeasurementModel
-import com.tasty.recipesapp.models.NutritionModel
-import com.tasty.recipesapp.models.RecipeModel
-import com.tasty.recipesapp.models.UnitModel
+import com.tasty.recipesapp.data.dots.ComponentsDTO
+import com.tasty.recipesapp.data.dots.IngredientDTO
+import com.tasty.recipesapp.data.dots.InstructionsDTO
+import com.tasty.recipesapp.data.dots.MeasurementDTO
+import com.tasty.recipesapp.data.dots.NutritionDTO
+import com.tasty.recipesapp.data.dots.RecipeDTO
+import com.tasty.recipesapp.data.dots.UnitDTO
+import com.tasty.recipesapp.data.models.ComponentsModel
+import com.tasty.recipesapp.data.models.IngredientModel
+import com.tasty.recipesapp.data.models.InstructionsModel
+import com.tasty.recipesapp.data.models.MeasurementModel
+import com.tasty.recipesapp.data.models.NutritionModel
+import com.tasty.recipesapp.data.models.RecipeModel
+import com.tasty.recipesapp.data.models.UnitModel
 import org.json.JSONObject
 
 class RecipeRepository {
@@ -138,9 +138,9 @@ class RecipeRepository {
   }},
   {
   "recipeID": 2,
-  "name": "One-Pot Lemon Garlic Shrimp Pasta",
-  "description": "This easy 30-minute pasta recipe transforms ingredients that you already have in your kitchen into a posh, seafood dish you’ll want to serve at your next dinner party. And since the whole dish is made in a single pot, clean-up is easy. Don’t be surprised if this becomes your favorite quick go-to.",
-  "thumbnailUrl": "https://img.buzzfeed.com/video-api-prod/assets/9ee2dadcbfcb4095872e6cdbaa24ff14/Thumb_A_FB.jpg",
+  "name": "Pizza",
+  "description": "This an  easy  pizza 30-minute pasta recipe transforms ingredients that you already have in your kitchen into a posh, seafood dish you’ll want to serve at your next dinner party. And since the whole dish is made in a single pot, clean-up is easy. Don’t be surprised if this becomes your favorite quick go-to.",
+  "thumbnailUrl": "https://ro.wikipedia.org/wiki/Pizza#/media/Fi%C8%99ier:20200719_180910_Suduch_Pizza,_Pizzeria_Yoav_Tel_Aviv_anagoria.jpg",
   "keywords": "pasta, shrimp, lemon, garlic",
   "isPublic": false,
   "userEmail": "someone@gmail.com",
@@ -254,7 +254,7 @@ class RecipeRepository {
 }"""
 
 
-    fun IngredientDTO.toModel():IngredientModel{
+    fun IngredientDTO.toModel(): IngredientModel {
         return IngredientModel(
           name = this.name
         )
@@ -266,7 +266,7 @@ class RecipeRepository {
             position=this.position)
     }
 
-    fun UnitDTO.toModel():UnitModel{
+    fun UnitDTO.toModel(): UnitModel {
         return UnitModel(
             name = this.name,
             displaySingular= this.displaySingular,
@@ -275,7 +275,7 @@ class RecipeRepository {
         )
     }
 
-    fun MeasurementDTO.toModel():MeasurementModel{
+    fun MeasurementDTO.toModel(): MeasurementModel {
         return MeasurementModel(
             quantity = this.quantity,
             unit = this.unit
@@ -287,7 +287,7 @@ class RecipeRepository {
 
 
 
-    fun ComponentsDTO.toMode():ComponentsModel{
+    fun ComponentsDTO.toMode(): ComponentsModel {
         return ComponentsModel(
             rawText =this.rawText,
             extraComment =this.extraComment,
@@ -302,7 +302,7 @@ class RecipeRepository {
 
 
 
-   fun NutritionDTO.toModel():NutritionModel{
+   fun NutritionDTO.toModel(): NutritionModel {
         return NutritionModel(
             calories=this.calories,
             protein=this.protein,

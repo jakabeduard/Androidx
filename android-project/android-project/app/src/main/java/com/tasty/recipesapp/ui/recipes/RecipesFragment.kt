@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.tasty.recipesapp.R
+import com.tasty.recipesapp.adapter.RecipeAdapter
 import com.tasty.recipesapp.databinding.FragmentRecipesBinding
 
 class RecipesFragment : Fragment() {
@@ -34,7 +35,7 @@ class RecipesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.recipesRecipesDetailID.setOnClickListener{
+/*        binding.recipesRecipesDetailID.setOnClickListener{
             val bundle=Bundle()
             val recipeList= recipeViewModel.recipes.value
             val randomIndex=(recipeList?.indices)?.random()
@@ -45,21 +46,26 @@ class RecipesFragment : Fragment() {
             }
             findNavController().navigate(R.id.action_recipesFragment_to_recipesDetailFragment,bundle)/// atmentunk  a detail fragmentre
             ///vagy itt betoltunk valamit
-        }
+        }*/
 
-        binding.recipesLoadRecipes.setOnClickListener{
+/*        binding.recipesLoadRecipes.setOnClickListener{
             Toast.makeText(requireContext(), "Recipes Loding..", Toast.LENGTH_LONG).show()
             recipeViewModel.loadRecipesData();
         }
 
-        recipeViewModel.loadRecipesData();
+        recipeViewModel.loadRecipesData();*/
+
+        recipeViewModel.loadRecipesData()
 
         recipeViewModel.recipes.observe(viewLifecycleOwner) {
-
                 recipes ->
+            binding.recyclerView.adapter=RecipeAdapter(recipes)
+
+
             for (recipesModel in recipes) {
                 Log.d("Recipes", recipesModel.toString())
             }
+            Toast.makeText(requireContext(),"Recipes Loding", Toast.LENGTH_LONG).show()
         }
 
     }

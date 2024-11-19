@@ -1,6 +1,6 @@
-package com.tasty.recipesapp.dots
+package com.tasty.recipesapp.data.models
 
-data class NutritionDTO(
+data class NutritionModel(
     val calories: Int,
     val protein: Int,
     val fat: Int,

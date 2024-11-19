@@ -1,6 +1,6 @@
-package com.tasty.recipesapp.models
+package com.tasty.recipesapp.data.models
 
-import com.tasty.recipesapp.dots.NutritionDTO
+import com.tasty.recipesapp.data.dots.NutritionDTO
 
 
 data class RecipeModel(
@@ -15,6 +15,6 @@ data class RecipeModel(
     val country: String,
     val numServings: Int,
     val components: List<ComponentsModel>,
-    val instructions: List< InstructionsModel>,
+    val instructions: List<InstructionsModel>,
     val nutrition: NutritionDTO
 )
