@@ -1,5 +1,6 @@
 package com.tasty.recipesapp.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,12 +49,15 @@ class RecipeAdapter(private val dataSet: List<RecipeModel>) :
         viewHolder.recipe_Name.text = dataSet[position].name
         viewHolder.recipe_Description.text = dataSet[position].description
 
+
         Glide.with(viewHolder.itemView)
             .load(dataSet[position].thumbnailUrl)
             .placeholder(R.drawable.sample_recipe_image) // Placeholder image
             .error(R.drawable.sample_recipe_image) // Error fallback image
             .centerCrop()
             .into(viewHolder.recipe_Image)
+        Log.d("RecipeAdapter", "Thumbnail URL: ${dataSet[position].thumbnailUrl}")
+
 
     }
 

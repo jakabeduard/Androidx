@@ -139,8 +139,8 @@ class RecipeRepository {
   {
   "recipeID": 2,
   "name": "Pizza",
-  "description": "This an  easy  pizza 30-minute pasta recipe transforms ingredients that you already have in your kitchen into a posh, seafood dish you’ll want to serve at your next dinner party. And since the whole dish is made in a single pot, clean-up is easy. Don’t be surprised if this becomes your favorite quick go-to.",
-  "thumbnailUrl": "https://ro.wikipedia.org/wiki/Pizza#/media/Fi%C8%99ier:20200719_180910_Suduch_Pizza,_Pizzeria_Yoav_Tel_Aviv_anagoria.jpg",
+  "description": "pizza  easy 30-minute pasta recipe transforms ingredients that you already have in your kitchen into a posh, seafood dish you’ll want to serve at your next dinner party. And since the whole dish is made in a single pot, clean-up is easy. Don’t be surprised if this becomes your favorite quick go-to.",
+  "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flower_jtca001.jpg",
   "keywords": "pasta, shrimp, lemon, garlic",
   "isPublic": false,
   "userEmail": "someone@gmail.com",

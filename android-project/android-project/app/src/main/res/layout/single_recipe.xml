@@ -12,6 +12,7 @@
             android:layout_height="wrap_content"
             android:padding="16dp">
 
+
             <!-- Recipe Image -->
             <ImageView
                 android:id="@+id/recipeImage"
