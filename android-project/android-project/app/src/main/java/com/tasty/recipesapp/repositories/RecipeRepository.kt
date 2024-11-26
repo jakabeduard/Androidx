@@ -17,9 +17,10 @@ import com.tasty.recipesapp.data.models.MeasurementModel
 import com.tasty.recipesapp.data.models.NutritionModel
 import com.tasty.recipesapp.data.models.RecipeModel
 import com.tasty.recipesapp.data.models.UnitModel
+import com.tasty.recipesapp.database.RecipeDao
 import org.json.JSONObject
 
-class RecipeRepository {
+class RecipeRepository(val recipeDao: RecipeDao) {
     val dummyDataRecipe =  """{
 
   "recipes": [ {
@@ -315,6 +316,7 @@ class RecipeRepository {
     }
     fun RecipeDTO.toModel(): RecipeModel {
         return RecipeModel(
+           /* isFavorit=this.isFavorit?:false       */
             recipeID = this.recipeID,
             name = this.name,
             description = this.description,
@@ -327,7 +329,7 @@ class RecipeRepository {
             numServings =this.numServings,
             components =this.components.map { it.toMode() },
             instructions = this.instructions.map { it.toModel() },
-            nutrition = this.nutrition
+            nutrition = this.nutrition?.toModel()?:NutritionModel(0, 0, 0, 0, 0, 0)
 
 
         )
@@ -337,7 +339,8 @@ class RecipeRepository {
       return this.map { it.toModel() }}
 
 
-    private fun loadRecipesDTOs():List<RecipeDTO>{
+    suspend fun  loadRecipesDTOs():List<RecipeDTO>{
+       /* val dbRecipes=recipeDao.getAllRecipes()
         val gson = Gson()
         var recipesList = listOf<RecipeDTO>()
 
@@ -347,9 +350,20 @@ class RecipeRepository {
         recipesList = gson.fromJson(recipesArray.toString(), type)
         Log.i("GSON", recipesList.toString())
 
-        return recipesList
+        return recipesList     eddig dummy adatok*/
 
-    }
+        val gson = Gson()
+        return recipeDao.getAllRecipes().map {
+            val jsonObject = JSONObject(it.json)
+            jsonObject.apply { put("recipeID", it.internalId) }
+            gson.fromJson(jsonObject.toString(), RecipeDTO::class.java)
+        }
 
-    fun getRecipes()=loadRecipesDTOs().toModelList()
+
+
+
+
+}
+
+    suspend fun getRecipes()=loadRecipesDTOs().toModelList()
 }

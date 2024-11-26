@@ -13,7 +13,7 @@ data class RecipeDTO(
     val numServings: Int,
     val components: List<ComponentsDTO>,
     val instructions: List<InstructionsDTO>,
-    val nutrition: NutritionDTO
+    val nutrition: NutritionDTO?
 
 
 )

@@ -16,5 +16,5 @@ data class RecipeModel(
     val numServings: Int,
     val components: List<ComponentsModel>,
     val instructions: List<InstructionsModel>,
-    val nutrition: NutritionDTO
+    val nutrition: NutritionModel
 )

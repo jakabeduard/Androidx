@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.recipes.NewRecipeFragment">
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.RecipeAddFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Recipe Information -->
+            <EditText
+                android:id="@+id/etRecipeID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Recipe ID"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Recipe Name" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description" />
+
+            <EditText
+                android:id="@+id/etThumbnailUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Thumbnail URL" />
+
+            <EditText
+                android:id="@+id/etKeywords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Keywords (comma-separated)" />
+
+            <EditText
+                android:id="@+id/etUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="User Email" />
+
+            <EditText
+                android:id="@+id/etOriginalVideoUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Original Video URL" />
+
+            <EditText
+                android:id="@+id/etCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Country" />
+
+            <EditText
+                android:id="@+id/etNumServings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number of Servings"
+                android:inputType="number" />
+
+            <Switch
+                android:id="@+id/switchIsPublic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Is Public" />
+
+            <!-- Components Section -->
+            <Button
+                android:id="@+id/btnAddComponent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Component" />
+
+            <!-- Instructions Section -->
+            <Button
+                android:id="@+id/btnAddInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Instruction" />
+
+            <!-- Nutrition Information -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nutrition Information"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCalories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Calories"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etProtein"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Protein (g)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etFat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fat (g)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etCarbohydrates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Carbohydrates (g)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etSugar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Sugar (g)"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etFiber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fiber (g)"
+                android:inputType="number" />
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btnSaveRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Recipe" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

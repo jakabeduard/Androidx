@@ -11,10 +11,11 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.tasty.recipesapp.R
 import com.tasty.recipesapp.adapter.RecipeAdapter
+import com.tasty.recipesapp.databinding.FragmentProfileBinding
 import com.tasty.recipesapp.databinding.FragmentRecipesBinding
 
 class RecipesFragment : Fragment() {
-    private val recipeViewModel: RecipesViewModel by viewModels()
+    private val profileViewModel: RecipesViewModel by viewModels()
 
     private var _binding:FragmentRecipesBinding?=null
     private val binding get()=_binding!!
@@ -54,10 +55,17 @@ class RecipesFragment : Fragment() {
         }
 
         recipeViewModel.loadRecipesData();*/
+        binding.addNewRecipeButtom.setOnClickListener{
 
-        recipeViewModel.loadRecipesData()
+            findNavController().navigate(R.id.action_recipesFragment_to_newRecipeFragment)/// atmentunk  a detail fragmentre
+            ///vagy itt betoltunk valamit
+        }
 
-        recipeViewModel.recipes.observe(viewLifecycleOwner) {
+
+
+        profileViewModel.loadRecipesData()
+
+        profileViewModel.recipes.observe(viewLifecycleOwner) {
                 recipes ->
             binding.recyclerView.adapter=RecipeAdapter(recipes)
 

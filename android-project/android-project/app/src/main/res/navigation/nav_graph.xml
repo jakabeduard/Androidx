@@ -23,11 +23,19 @@
         <action
             android:id="@+id/action_recipesFragment_to_recipesDetailFragment"
             app:destination="@id/recipesDetailFragment" />
+        <action
+            android:id="@+id/action_recipesFragment_to_newRecipeFragment"
+            app:destination="@id/newRecipeFragment" />
     </fragment>
     <fragment
         android:id="@+id/recipesDetailFragment"
         android:name="com.tasty.recipesapp.ui.recipes.RecipesDetailFragment"
         android:label="fragment_recipes_detail"
         tools:layout="@layout/fragment_recipes_detail" />
+    <fragment
+        android:id="@+id/newRecipeFragment"
+        android:name="com.tasty.recipesapp.ui.recipes.NewRecipeFragment"
+        android:label="new_recipe"
+        tools:layout="@layout/fragment_new_recipe" />
 
 </navigation>
