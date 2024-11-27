@@ -7,6 +7,7 @@ data class RecipeDTO(
     val thumbnailUrl: String,
     val keywords: String,
     val isPublic: Boolean,
+    val isFavourite: Boolean,
     val userEmail: String,
     val originalVideoUrl: String,
     val country: String,

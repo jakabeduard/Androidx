@@ -322,6 +322,7 @@ class RecipeRepository(val recipeDao: RecipeDao) {
             description = this.description,
             thumbnailUrl = this.thumbnailUrl,
             keywords =this.keywords,
+            isFavourite = this.isFavourite?:false,
             isPublic =this.isPublic,
             userEmail = this.userEmail,
             originalVideoUrl =this.originalVideoUrl,

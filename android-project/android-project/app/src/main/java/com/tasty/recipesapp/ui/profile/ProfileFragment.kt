@@ -37,43 +37,48 @@ class ProfileFragment : Fragment() {
         return view
     }
 
+
+    ///CSAK A FAVORITOKAT JELENITI MEG
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /*        binding.recipesRecipesDetailID.setOnClickListener{
-                    val bundle=Bundle()
-                    val recipeList= recipeViewModel.recipes.value
-                    val randomIndex=(recipeList?.indices)?.random()
-                    val randomRecipe=randomIndex?.let { it1 ->recipeList?.get(it1) }
-                    bundle.apply {
-                        putString("id", randomRecipe?.recipeID.toString())
-                        putString("name", randomRecipe?.name)
-                    }
-                    findNavController().navigate(R.id.action_recipesFragment_to_recipesDetailFragment,bundle)/// atmentunk  a detail fragmentre
-                    ///vagy itt betoltunk valamit
-                }*/
-
-        /*        binding.recipesLoadRecipes.setOnClickListener{
-                    Toast.makeText(requireContext(), "Recipes Loding..", Toast.LENGTH_LONG).show()
-                    recipeViewModel.loadRecipesData();
-                }
-
-                recipeViewModel.loadRecipesData();*/
-
+        // Load the recipes data
         recipeViewModel.loadRecipesData()
 
-        recipeViewModel.recipes.observe(viewLifecycleOwner) {
-                recipes ->
-            binding.recyclerView.adapter= RecipeAdapter(recipes)
+        // Observe the recipes list from the view model
+        recipeViewModel.recipes.observe(viewLifecycleOwner) { recipes ->
+            // Filter the recipes to show only those with isFavourite = true
+            val favoriteRecipes = recipes.filter { it.isFavourite }
 
+            // Check if there are favorite recipes available
+            if (favoriteRecipes.isNotEmpty()) {
+                // Set the filtered recipes to the adapter and provide onRecipeClick callback
+                binding.recyclerView.adapter = RecipeAdapter(favoriteRecipes) { recipe ->
+                    val bundle = Bundle().apply {
+                        putInt("id", recipe.recipeID)
+                        putString("name", recipe.name)
+                    }
 
-            for (recipesModel in recipes) {
-                Log.d("Recipes", recipesModel.toString())
+                }
+
+                // Log the favorite recipes
+                for (recipe in favoriteRecipes) {
+                    Log.d("Favorite Recipes", recipe.toString())
+                }
+
+                Toast.makeText(requireContext(), "Favorite Recipes Loaded", Toast.LENGTH_LONG).show()
+            } else {
+                // Show a message if there are no favorite recipes
+                Toast.makeText(requireContext(), "No favorite recipes available", Toast.LENGTH_SHORT).show()
             }
-            Toast.makeText(requireContext(),"Recipes Loding", Toast.LENGTH_LONG).show()
         }
-
     }
+
+
+
+
+
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

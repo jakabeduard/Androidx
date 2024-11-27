@@ -4,6 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -11,17 +12,24 @@ import com.bumptech.glide.Glide
 import com.tasty.recipesapp.R
 import com.tasty.recipesapp.data.models.RecipeModel
 
-class RecipeAdapter(private val dataSet: List<RecipeModel>) :
-    RecyclerView.Adapter<RecipeAdapter.ViewHolder>() {
+class RecipeAdapter(
+    private val dataSet: List<RecipeModel>,
+    private val onRecipeClick: (RecipeModel) -> Unit // Callback for navigation
+) : RecyclerView.Adapter<RecipeAdapter.ViewHolder>() {
 
     /**
      * Provide a reference to the type of views that you are using
      * (custom ViewHolder)
      */
+    
+
+
+
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val recipe_Name: TextView
         val recipe_Description: TextView
         val recipe_Image: ImageView
+        val buttonView: Button
 
 
         init {
@@ -29,6 +37,7 @@ class RecipeAdapter(private val dataSet: List<RecipeModel>) :
             recipe_Name = view.findViewById(R.id.recipeName)
             recipe_Description=view.findViewById(R.id.recipeDescription)
             recipe_Image=view.findViewById(R.id.recipeImage)
+            buttonView=view.findViewById(R.id.buttonView)
         }
     }
 
@@ -56,7 +65,13 @@ class RecipeAdapter(private val dataSet: List<RecipeModel>) :
             .error(R.drawable.sample_recipe_image) // Error fallback image
             .centerCrop()
             .into(viewHolder.recipe_Image)
+        val recipe = dataSet[position]
+
+        viewHolder.buttonView.setOnClickListener {
+            onRecipeClick(recipe)
+        }
         Log.d("RecipeAdapter", "Thumbnail URL: ${dataSet[position].thumbnailUrl}")
+
 
 
     }

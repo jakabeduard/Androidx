@@ -55,6 +55,24 @@ class RecipesFragment : Fragment() {
         }
 
         recipeViewModel.loadRecipesData();*/
+        profileViewModel.loadRecipesData() // Trigger data loading
+
+        profileViewModel.recipes.observe(viewLifecycleOwner) { recipes ->
+            // Ensure the recipes list is not null or empty
+            if (!recipes.isNullOrEmpty()) {
+                // Set the adapter with the recipes list and navigation callback
+                binding.recyclerView.adapter = RecipeAdapter(recipes) { recipe ->
+                    val bundle = Bundle().apply {
+                        putInt("id", recipe.recipeID)
+                        putString("name", recipe.name)
+                    }
+                    findNavController().navigate(R.id.action_recipesFragment_to_recipesDetailFragment, bundle)
+                }
+            } else {
+                Toast.makeText(requireContext(), "No recipes available", Toast.LENGTH_SHORT).show()
+            }
+        }
+
         binding.addNewRecipeButtom.setOnClickListener{
 
             findNavController().navigate(R.id.action_recipesFragment_to_newRecipeFragment)/// atmentunk  a detail fragmentre
@@ -63,17 +81,23 @@ class RecipesFragment : Fragment() {
 
 
 
+
         profileViewModel.loadRecipesData()
 
-        profileViewModel.recipes.observe(viewLifecycleOwner) {
-                recipes ->
-            binding.recyclerView.adapter=RecipeAdapter(recipes)
-
+        profileViewModel.recipes.observe(viewLifecycleOwner) { recipes ->
+            binding.recyclerView.adapter = RecipeAdapter(recipes) { recipe ->
+                // This is the onRecipeClick lambda
+                val bundle = Bundle().apply {
+                    putInt("id", recipe.recipeID)
+                    putString("name", recipe.name)
+                }
+                findNavController().navigate(R.id.action_recipesFragment_to_recipesDetailFragment, bundle)
+            }
 
             for (recipesModel in recipes) {
                 Log.d("Recipes", recipesModel.toString())
             }
-            Toast.makeText(requireContext(),"Recipes Loding", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Recipes Loading", Toast.LENGTH_LONG).show()
         }
 
     }
